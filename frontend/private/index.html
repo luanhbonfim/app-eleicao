@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro de Partidos e Candidatos</title>
+    <link rel="stylesheet" href="/private/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Cadastro de Partidos e Candidatos</h1>
+        <nav>
+            <ul>
+                <li><a href="#cadastro-partidos">Cadastro de Partidos</a></li>
+                <li><a href="#cadastro-candidatos">Cadastro de Candidatos</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cadastro-partidos">
+            <h2>Cadastro de Partidos</h2>
+            <form id="form-partido">
+                <label for="nome-partido">Nome do Partido:</label>
+                <input type="text" id="nome-partido" name="nome" required>
+                
+                <label for="sigla-partido">Sigla:</label>
+                <input type="text" id="sigla-partido" name="sigla" required>
+                
+                <label for="numero-registro-partido">Número de Registro:</label>
+                <input type="number" id="numero-registro-partido" name="numero" required>
+                
+                <button type="submit">Cadastrar Partido</button>
+            </form>
+            <div id="partidos-cadastrados">
+                <h3>Partidos Cadastrados</h3>
+                <ul id="lista-partidos"></ul>
+            </div>
+        </section>
+
+        <section id="cadastro-candidatos">
+            <h2>Cadastro de Candidatos</h2>
+            <form id="form-candidato">
+                <label for="nome-candidato">Nome do Candidato:</label>
+                <input type="text" id="nome-candidato" name="nome" required>
+                
+                <label for="partido-select">Partido:</label>
+                <select id="partido-select" name="partido" required>
+                    <!-- Será preenchido via JavaScript -->
+                </select>
+                
+                <label for="numero-candidato">Número do Candidato:</label>
+                <input type="number" id="numero-candidato" name="numero" required>
+                
+                <button type="submit">Cadastrar Candidato</button>
+            </form>
+            <div id="candidatos-cadastrados">
+                <h3>Candidatos Cadastrados</h3>
+                <ul id="lista-candidatos"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema de Cadastro de Partidos e Candidatos © 2024</p>
+    </footer>
+
+    <script src="/private/script.js"></script>
+</body>
+</html>
